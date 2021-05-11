@@ -10,6 +10,9 @@ class TodolistsController < ApplicationController
     # 3.　トップ画面へリダイレクト
     redirect_to "/top"
   end
+  def index
+    @lists = List.all
+  end
   private
   # ストロングパラメータ
   def list_params
